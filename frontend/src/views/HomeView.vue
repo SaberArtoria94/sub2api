@@ -42,7 +42,11 @@
         <!-- Logo -->
         <div class="flex items-center">
           <div class="h-10 w-10 overflow-hidden rounded-xl shadow-md">
-            <img :src="siteLogo || '/logo.png'" alt="Logo" class="h-full w-full object-contain" />
+            <img
+              :src="siteLogo || '/logo.png'"
+              alt="Logo"
+              class="h-full w-full object-contain"
+            />
           </div>
         </div>
 
@@ -84,7 +88,9 @@
             >
               {{ userInitial }}
             </span>
-            <span class="text-xs font-medium text-white">{{ t('home.dashboard') }}</span>
+            <span class="text-xs font-medium text-white">{{
+              t("home.dashboard")
+            }}</span>
             <svg
               class="h-3 w-3 text-gray-400"
               fill="none"
@@ -104,7 +110,7 @@
             to="/login"
             class="inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white transition-colors hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700"
           >
-            {{ t('home.login') }}
+            {{ t("home.login") }}
           </router-link>
         </div>
       </nav>
@@ -114,7 +120,9 @@
     <main class="relative z-10 flex-1 px-6 py-16">
       <div class="mx-auto max-w-6xl">
         <!-- Hero Section - Left/Right Layout -->
-        <div class="mb-12 flex flex-col items-center justify-between gap-12 lg:flex-row lg:gap-16">
+        <div
+          class="mb-12 flex flex-col items-center justify-between gap-12 lg:flex-row lg:gap-16"
+        >
           <!-- Left: Text Content -->
           <div class="flex-1 text-center lg:text-left">
             <h1
@@ -132,8 +140,17 @@
                 :to="isAuthenticated ? dashboardPath : '/login'"
                 class="btn btn-primary px-8 py-3 text-base shadow-lg shadow-primary-500/30"
               >
-                {{ isAuthenticated ? t('home.goToDashboard') : t('home.getStarted') }}
-                <Icon name="arrowRight" size="md" class="ml-2" :stroke-width="2" />
+                {{
+                  isAuthenticated
+                    ? t("home.goToDashboard")
+                    : t("home.getStarted")
+                }}
+                <Icon
+                  name="arrowRight"
+                  size="md"
+                  class="ml-2"
+                  :stroke-width="2"
+                />
               </router-link>
             </div>
           </div>
@@ -177,30 +194,35 @@
         </div>
 
         <!-- Feature Tags - Centered -->
-        <div class="mb-12 flex flex-wrap items-center justify-center gap-4 md:gap-6">
+        <div
+          class="mb-12 flex flex-wrap items-center justify-center gap-4 md:gap-6"
+        >
           <div
             class="inline-flex items-center gap-2.5 rounded-full border border-gray-200/50 bg-white/80 px-5 py-2.5 shadow-sm backdrop-blur-sm dark:border-dark-700/50 dark:bg-dark-800/80"
           >
             <Icon name="swap" size="sm" class="text-primary-500" />
-            <span class="text-sm font-medium text-gray-700 dark:text-dark-200">{{
-              t('home.tags.subscriptionToApi')
-            }}</span>
+            <span
+              class="text-sm font-medium text-gray-700 dark:text-dark-200"
+              >{{ t("home.tags.subscriptionToApi") }}</span
+            >
           </div>
           <div
             class="inline-flex items-center gap-2.5 rounded-full border border-gray-200/50 bg-white/80 px-5 py-2.5 shadow-sm backdrop-blur-sm dark:border-dark-700/50 dark:bg-dark-800/80"
           >
             <Icon name="shield" size="sm" class="text-primary-500" />
-            <span class="text-sm font-medium text-gray-700 dark:text-dark-200">{{
-              t('home.tags.stickySession')
-            }}</span>
+            <span
+              class="text-sm font-medium text-gray-700 dark:text-dark-200"
+              >{{ t("home.tags.stickySession") }}</span
+            >
           </div>
           <div
             class="inline-flex items-center gap-2.5 rounded-full border border-gray-200/50 bg-white/80 px-5 py-2.5 shadow-sm backdrop-blur-sm dark:border-dark-700/50 dark:bg-dark-800/80"
           >
             <Icon name="chart" size="sm" class="text-primary-500" />
-            <span class="text-sm font-medium text-gray-700 dark:text-dark-200">{{
-              t('home.tags.realtimeBilling')
-            }}</span>
+            <span
+              class="text-sm font-medium text-gray-700 dark:text-dark-200"
+              >{{ t("home.tags.realtimeBilling") }}</span
+            >
           </div>
         </div>
 
@@ -215,11 +237,13 @@
             >
               <Icon name="server" size="lg" class="text-white" />
             </div>
-            <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              {{ t('home.features.unifiedGateway') }}
+            <h3
+              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+            >
+              {{ t("home.features.unifiedGateway") }}
             </h3>
             <p class="text-sm leading-relaxed text-gray-600 dark:text-dark-400">
-              {{ t('home.features.unifiedGatewayDesc') }}
+              {{ t("home.features.unifiedGatewayDesc") }}
             </p>
           </div>
 
@@ -244,11 +268,13 @@
                 />
               </svg>
             </div>
-            <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              {{ t('home.features.multiAccount') }}
+            <h3
+              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+            >
+              {{ t("home.features.multiAccount") }}
             </h3>
             <p class="text-sm leading-relaxed text-gray-600 dark:text-dark-400">
-              {{ t('home.features.multiAccountDesc') }}
+              {{ t("home.features.multiAccountDesc") }}
             </p>
           </div>
 
@@ -273,11 +299,13 @@
                 />
               </svg>
             </div>
-            <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              {{ t('home.features.balanceQuota') }}
+            <h3
+              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+            >
+              {{ t("home.features.balanceQuota") }}
             </h3>
             <p class="text-sm leading-relaxed text-gray-600 dark:text-dark-400">
-              {{ t('home.features.balanceQuotaDesc') }}
+              {{ t("home.features.balanceQuotaDesc") }}
             </p>
           </div>
         </div>
@@ -285,16 +313,16 @@
         <!-- Supported Providers -->
         <div class="mb-8 text-center">
           <h2 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">
-            {{ t('home.providers.title') }}
+            {{ t("home.providers.title") }}
           </h2>
           <p class="text-sm text-gray-600 dark:text-dark-400">
-            {{ t('home.providers.description') }}
+            {{ t("home.providers.description") }}
           </p>
         </div>
 
         <div class="mb-16 flex flex-wrap items-center justify-center gap-4">
           <!-- Claude - Supported -->
-          <div
+          <!-- <div
             class="flex items-center gap-2 rounded-xl border border-primary-200 bg-white/60 px-5 py-3 ring-1 ring-primary-500/20 backdrop-blur-sm dark:border-primary-800 dark:bg-dark-800/60"
           >
             <div
@@ -307,7 +335,7 @@
               class="rounded bg-primary-100 px-1.5 py-0.5 text-[10px] font-medium text-primary-600 dark:bg-primary-900/30 dark:text-primary-400"
               >{{ t('home.providers.supported') }}</span
             >
-          </div>
+          </div> -->
           <!-- GPT - Supported -->
           <div
             class="flex items-center gap-2 rounded-xl border border-primary-200 bg-white/60 px-5 py-3 ring-1 ring-primary-500/20 backdrop-blur-sm dark:border-primary-800 dark:bg-dark-800/60"
@@ -317,14 +345,16 @@
             >
               <span class="text-xs font-bold text-white">G</span>
             </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-dark-200">GPT</span>
+            <span class="text-sm font-medium text-gray-700 dark:text-dark-200"
+              >GPT</span
+            >
             <span
               class="rounded bg-primary-100 px-1.5 py-0.5 text-[10px] font-medium text-primary-600 dark:bg-primary-900/30 dark:text-primary-400"
-              >{{ t('home.providers.supported') }}</span
+              >{{ t("home.providers.supported") }}</span
             >
           </div>
           <!-- Gemini - Supported -->
-          <div
+          <!-- <div
             class="flex items-center gap-2 rounded-xl border border-primary-200 bg-white/60 px-5 py-3 ring-1 ring-primary-500/20 backdrop-blur-sm dark:border-primary-800 dark:bg-dark-800/60"
           >
             <div
@@ -337,9 +367,9 @@
               class="rounded bg-primary-100 px-1.5 py-0.5 text-[10px] font-medium text-primary-600 dark:bg-primary-900/30 dark:text-primary-400"
               >{{ t('home.providers.supported') }}</span
             >
-          </div>
+          </div> -->
           <!-- Antigravity - Supported -->
-          <div
+          <!-- <div
             class="flex items-center gap-2 rounded-xl border border-primary-200 bg-white/60 px-5 py-3 ring-1 ring-primary-500/20 backdrop-blur-sm dark:border-primary-800 dark:bg-dark-800/60"
           >
             <div
@@ -352,7 +382,7 @@
               class="rounded bg-primary-100 px-1.5 py-0.5 text-[10px] font-medium text-primary-600 dark:bg-primary-900/30 dark:text-primary-400"
               >{{ t('home.providers.supported') }}</span
             >
-          </div>
+          </div> -->
           <!-- More - Coming Soon -->
           <div
             class="flex items-center gap-2 rounded-xl border border-gray-200/50 bg-white/40 px-5 py-3 opacity-60 backdrop-blur-sm dark:border-dark-700/50 dark:bg-dark-800/40"
@@ -362,25 +392,102 @@
             >
               <span class="text-xs font-bold text-white">+</span>
             </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-dark-200">{{ t('home.providers.more') }}</span>
+            <span
+              class="text-sm font-medium text-gray-700 dark:text-dark-200"
+              >{{ t("home.providers.more") }}</span
+            >
             <span
               class="rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-500 dark:bg-dark-700 dark:text-dark-400"
-              >{{ t('home.providers.soon') }}</span
+              >{{ t("home.providers.soon") }}</span
             >
+          </div>
+        </div>
+
+        <div class="mb-8 text-center">
+          <h2 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">
+            {{ t("home.pricing.title") }}
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-dark-400">
+            {{ t("home.pricing.description") }}
+          </p>
+        </div>
+
+        <!-- 三列定价套餐 -->
+        <div v-if="pricingPlans.length > 0" class="mx-auto mt-10 max-w-6xl">
+          <div class="grid gap-6 md:grid-cols-3">
+            <div
+              v-for="(plan, idx) in pricingPlans"
+              :key="idx"
+              class="flex flex-col overflow-hidden rounded-2xl border border-gray-200/50 bg-white/70 shadow-md backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10 dark:border-dark-700/50 dark:bg-dark-800/70"
+            >
+              <!-- 顶部���套餐类型 -->
+              <div class="p-6 text-center">
+                <p class="text-xs font-medium uppercase tracking-wide text-primary-600 dark:text-primary-400">
+                  {{ plan.badge }}
+                </p>
+                <h3 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">
+                  {{ plan.title }}
+                </h3>
+              </div>
+              <!-- 中间：价格 + slogan -->
+              <div class="flex flex-1 flex-col items-center justify-center p-6 pt-0">
+                <p class="text-4xl font-bold tabular-nums text-gray-900 dark:text-white">
+                  {{ plan.price }}
+                </p>
+                <p class="mt-1 text-sm text-gray-600 dark:text-dark-400">
+                  {{ plan.period }}
+                </p>
+                <p class="mt-3 text-sm text-gray-500 dark:text-dark-500">
+                  {{ plan.slogan }}
+                </p>
+              </div>
+              <!-- 底部：三行列表 -->
+              <div class="border-t border-gray-100 p-6 dark:border-dark-700/80">
+                <ul class="space-y-3 text-sm text-gray-700 dark:text-dark-300">
+                  <li class="flex items-start gap-2">
+                    <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded text-[10px] font-bold text-white bg-primary-500">✓</span>
+                    <span>{{ plan.feature1 }}</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded text-[10px] font-bold text-white bg-primary-500">✓</span>
+                    <span>{{ plan.feature2 }}</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded text-[10px] font-bold text-white bg-primary-500">✓</span>
+                    <span>{{ plan.feature3 }}</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- 底部按钮（可选） -->
+              <div class="p-6 pt-0">
+                <a
+                  v-if="plan.url"
+                  :href="plan.url"
+                  :target="isExternalUrl(plan.url) ? '_blank' : undefined"
+                  :rel="isExternalUrl(plan.url) ? 'noopener noreferrer' : undefined"
+                  class="block w-full rounded-xl bg-primary-600 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+                >
+                  {{ plan.cta }}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class="relative z-10 border-t border-gray-200/50 px-6 py-8 dark:border-dark-800/50">
+    <footer
+      class="relative z-10 border-t border-gray-200/50 px-6 py-8 dark:border-dark-800/50"
+    >
       <div
         class="mx-auto flex max-w-6xl flex-col items-center justify-center gap-4 text-center sm:flex-row sm:text-left"
       >
         <p class="text-sm text-gray-500 dark:text-dark-400">
-          &copy; {{ currentYear }} {{ siteName }}. {{ t('home.footer.allRightsReserved') }}
+          &copy; {{ currentYear }} {{ siteName }}.
+          {{ t("home.footer.allRightsReserved") }}
         </p>
-        <div class="flex items-center gap-4">
+        <!-- <div class="flex items-center gap-4">
           <a
             v-if="docUrl"
             :href="docUrl"
@@ -398,86 +505,163 @@
           >
             GitHub
           </a>
-        </div>
+        </div> -->
       </div>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useAuthStore, useAppStore } from '@/stores'
-import LocaleSwitcher from '@/components/common/LocaleSwitcher.vue'
-import Icon from '@/components/icons/Icon.vue'
+import { ref, computed, onMounted } from "vue";
+import { useI18n } from "vue-i18n";
+import { useAuthStore, useAppStore } from "@/stores";
+import LocaleSwitcher from "@/components/common/LocaleSwitcher.vue";
+import Icon from "@/components/icons/Icon.vue";
 
-const { t } = useI18n()
+const { t } = useI18n();
 
-const authStore = useAuthStore()
-const appStore = useAppStore()
+const authStore = useAuthStore();
+const appStore = useAppStore();
 
 // Site settings - directly from appStore (already initialized from injected config)
-const siteName = computed(() => appStore.cachedPublicSettings?.site_name || appStore.siteName || 'Sub2API')
-const siteLogo = computed(() => appStore.cachedPublicSettings?.site_logo || appStore.siteLogo || '')
-const siteSubtitle = computed(() => appStore.cachedPublicSettings?.site_subtitle || 'AI API Gateway Platform')
-const docUrl = computed(() => appStore.cachedPublicSettings?.doc_url || appStore.docUrl || '')
-const homeContent = computed(() => appStore.cachedPublicSettings?.home_content || '')
+const siteName = computed(
+  () =>
+    appStore.cachedPublicSettings?.site_name || appStore.siteName || "Sub2API"
+);
+const siteLogo = computed(
+  () => appStore.cachedPublicSettings?.site_logo || appStore.siteLogo || ""
+);
+const siteSubtitle = computed(
+  () =>
+    appStore.cachedPublicSettings?.site_subtitle || "AI API Gateway Platform"
+);
+const docUrl = computed(
+  () => appStore.cachedPublicSettings?.doc_url || appStore.docUrl || ""
+);
+const homeContent = computed(
+  () => appStore.cachedPublicSettings?.home_content || ""
+);
 
 // Check if homeContent is a URL (for iframe display)
 const isHomeContentUrl = computed(() => {
-  const content = homeContent.value.trim()
-  return content.startsWith('http://') || content.startsWith('https://')
-})
+  const content = homeContent.value.trim();
+  return content.startsWith("http://") || content.startsWith("https://");
+});
 
 // Theme
-const isDark = ref(document.documentElement.classList.contains('dark'))
+const isDark = ref(document.documentElement.classList.contains("dark"));
 
 // GitHub URL
-const githubUrl = 'https://github.com/Wei-Shaw/sub2api'
+// const githubUrl = 'https://github.com/Wei-Shaw/sub2api'
 
 // Auth state
-const isAuthenticated = computed(() => authStore.isAuthenticated)
-const isAdmin = computed(() => authStore.isAdmin)
-const dashboardPath = computed(() => isAdmin.value ? '/admin/dashboard' : '/dashboard')
+const isAuthenticated = computed(() => authStore.isAuthenticated);
+const isAdmin = computed(() => authStore.isAdmin);
+const dashboardPath = computed(() =>
+  isAdmin.value ? "/admin/dashboard" : "/dashboard"
+);
 const userInitial = computed(() => {
-  const user = authStore.user
-  if (!user || !user.email) return ''
-  return user.email.charAt(0).toUpperCase()
-})
+  const user = authStore.user;
+  if (!user || !user.email) return "";
+  return user.email.charAt(0).toUpperCase();
+});
 
 // Current year for footer
-const currentYear = computed(() => new Date().getFullYear())
+const currentYear = computed(() => new Date().getFullYear());
+
+// 三列定价套餐数据
+const pricingPlans = computed(() => {
+  const plans = appStore.cachedPublicSettings?.pricing_plans;
+  if (plans && Array.isArray(plans) && plans.length === 3) {
+    return plans.map(p => ({
+      badge: p.badge || '',
+      title: p.title || '',
+      price: p.price || '',
+      period: p.period || '',
+      slogan: p.slogan || '',
+      feature1: p.feature1 || '',
+      feature2: p.feature2 || '',
+      feature3: p.feature3 || '',
+      url: p.url || '',
+      cta: p.cta || t('home.pricing.cta')
+    }));
+  }
+  // 默认三列
+  return [
+    {
+      badge: t('home.pricing.plan1Badge'),
+      title: t('home.pricing.plan1Title'),
+      price: t('home.pricing.plan1Price'),
+      period: t('home.pricing.plan1Period'),
+      slogan: t('home.pricing.slogan'),
+      feature1: t('home.pricing.plan1Feature1'),
+      feature2: t('home.pricing.plan1Feature2'),
+      feature3: t('home.pricing.plan1Feature3'),
+      url: '',
+      cta: t('home.pricing.cta')
+    },
+    {
+      badge: t('home.pricing.plan2Badge'),
+      title: t('home.pricing.plan2Title'),
+      price: t('home.pricing.plan2Price'),
+      period: t('home.pricing.plan2Period'),
+      slogan: t('home.pricing.slogan'),
+      feature1: t('home.pricing.plan2Feature1'),
+      feature2: t('home.pricing.plan2Feature2'),
+      feature3: t('home.pricing.plan2Feature3'),
+      url: '',
+      cta: t('home.pricing.cta')
+    },
+    {
+      badge: t('home.pricing.plan3Badge'),
+      title: t('home.pricing.plan3Title'),
+      price: t('home.pricing.plan3Price'),
+      period: t('home.pricing.plan3Period'),
+      slogan: t('home.pricing.slogan'),
+      feature1: t('home.pricing.plan3Feature1'),
+      feature2: t('home.pricing.plan3Feature2'),
+      feature3: t('home.pricing.plan3Feature3'),
+      url: '',
+      cta: t('home.pricing.cta')
+    }
+  ];
+});
+
+// 判断是否为外链
+const isExternalUrl = (url: string) => {
+  return url.startsWith('http://') || url.startsWith('https://');
+};
 
 // Toggle theme
 function toggleTheme() {
-  isDark.value = !isDark.value
-  document.documentElement.classList.toggle('dark', isDark.value)
-  localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
+  isDark.value = !isDark.value;
+  document.documentElement.classList.toggle("dark", isDark.value);
+  localStorage.setItem("theme", isDark.value ? "dark" : "light");
 }
 
 // Initialize theme
 function initTheme() {
-  const savedTheme = localStorage.getItem('theme')
+  const savedTheme = localStorage.getItem("theme");
   if (
-    savedTheme === 'dark' ||
-    (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    savedTheme === "dark" ||
+    (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
-    isDark.value = true
-    document.documentElement.classList.add('dark')
+    isDark.value = true;
+    document.documentElement.classList.add("dark");
   }
 }
 
 onMounted(() => {
-  initTheme()
+  initTheme();
 
   // Check auth state
-  authStore.checkAuth()
+  authStore.checkAuth();
 
   // Ensure public settings are loaded (will use cache if already loaded from injected config)
   if (!appStore.publicSettingsLoaded) {
-    appStore.fetchPublicSettings()
+    appStore.fetchPublicSettings();
   }
-})
+});
 </script>
 
 <style scoped>
@@ -492,10 +676,8 @@ onMounted(() => {
   width: 420px;
   background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
   border-radius: 14px;
-  box-shadow:
-    0 25px 50px -12px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
   transform: perspective(1000px) rotateX(2deg) rotateY(-2deg);
   transition: transform 0.3s ease;
@@ -547,7 +729,7 @@ onMounted(() => {
 /* Terminal Body */
 .terminal-body {
   padding: 20px 24px;
-  font-family: ui-monospace, 'Fira Code', monospace;
+  font-family: ui-monospace, "Fira Code", monospace;
   font-size: 14px;
   line-height: 2;
 }
@@ -635,10 +817,8 @@ onMounted(() => {
 
 /* Dark mode adjustments */
 :deep(.dark) .terminal-window {
-  box-shadow:
-    0 25px 50px -12px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(20, 184, 166, 0.2),
-    0 0 40px rgba(20, 184, 166, 0.1),
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(20, 184, 166, 0.2), 0 0 40px rgba(20, 184, 166, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 </style>
