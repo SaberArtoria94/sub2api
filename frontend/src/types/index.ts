@@ -111,6 +111,18 @@ export interface PublicSettings {
   linuxdo_oauth_enabled: boolean
   backend_mode_enabled: boolean
   version: string
+  pricing_plans?: Array<{
+    badge?: string
+    title?: string
+    price?: string
+    period?: string
+    slogan?: string
+    feature1?: string
+    feature2?: string
+    feature3?: string
+    url?: string
+    cta?: string
+  }>
 }
 
 export interface AuthResponse {
